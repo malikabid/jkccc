@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html class>
+
+  <head>
+    <!-- title START -->
+    <meta charset="UTF-8">
+    <title>J&K Cable Car Corporation</title>
+    <meta name="description"
+      content="Offical Web site of J&K Cable Car Corporation">
+    <meta name="keywords"
+      content="J&K Cable Car Corporation,Kashmir University,University kashmir">
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link class="theme_link" href="layout/styles/colours/Green.css"
+      rel="stylesheet" type="text/css" />
+
+    <link href="layout/styles/main.css" rel="stylesheet" type="text/css"
+      media="all">
+    <link href="layout/styles/mediaqueries.css" rel="stylesheet" type="text/css"
+      media="all">
+
+    <!-- title END -->
+    <script language="javascript">
+    var xmlHttp1;
+    function GetXmlHttpObject() {
+      var xmlHttp = null;
+      try {
+        // Firefox, Opera 8.0+, Safari
+        xmlHttp = new XMLHttpRequest();
+      }
+      catch (e) {
+        // Internet Explorer
+        try {
+          xmlHttp = new ActiveXObject("Msxml2.XMLHTTP");
+        }
+        catch (e) {
+          xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+      }
+      return xmlHttp;
+    }
+
+    function GetNotificationList() {
+      document.getElementById('lstDepartmentalNotifications').innerHTML = "loading...";
+      document.getElementById('lnkDN').style.display = "none";
+      xmlHttp1 = GetXmlHttpObject();
+      if (xmlHttp1 == null) {
+        alert("Your browser does not support AJAX!");
+        return;
+      }
+      var url = "_Include/MultiPurposeAJAXFunctions.ashx?operation=GetNotificationList";
+      xmlHttp1.onreadystatechange = updateNotificationList;
+      xmlHttp1.open("POST", url, true);
+      xmlHttp1.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+      xmlHttp1.send("DepartmentID=" + document.getElementById('ddDepartment').value);
+    }
+
+    function updateNotificationList() {
+      if (xmlHttp1.readyState == 4) {
+        var responseString = xmlHttp1.responseText;
+        if (responseString != "") {
+          document.getElementById('lstDepartmentalNotifications').innerHTML = responseString;
+          document.getElementById('lnkDN').style.display = "block";
+        }
+        else {
+          document.getElementById('lstDepartmentalNotifications').innerHTML = "";
+          document.getElementById('lnkDN').style.display = "none";
+        }
+        if (responseString == 'No record found') document.getElementById('lnkDN').style.display = "none";
+
+      }
+    }
+  </script>
+  </head>
+
+  <body id="top">
+
+    <!-- HEADER -->
+    <!-- HEADER START -->
+
+    <div class="wrapper row1">
+      <header role="banner" id="header" class="clear">
+        <div class="fl_left">
+          <h1><a  href="Default.aspx"><img class="logo" style="height: 100px;" src="images/jkccclogo.png"
+                alt="J&K Cable Car Corporation">J&K Cable Car Corporation</a></h1>
+        </div>
+        <div class="fl_right right">
+          <ul class="meta nospace inline">
+            <li><span class="icon-phone"></span> +91 (194) 227 2096</li>
+            <li><span class="icon-envelope-alt"></span> <a
+                href="Default.aspx#">info@jkccc.com</a></li>
+          </ul>
+        </div>
+      </header>
+    </div>
+
+    <!-- MAIN NAVIGATION -->
+    <div class="wrapper row2">
+      <nav role="navigation" id="topnav" class="clear">
+        <ul class="clear">
+          <li id="lnkHome" class="active"><a href="/" title="Home">Home</a></li>
+          <li id="lnkAbout"><a class="drop" href="#" title="Pages">About</a>
+            <ul class="sub-menu">
+              <li id="subLnkAboutUok"><a href="/#" style="text-transform:none;"
+                  title="About Us">History</a></li>
+              <li id="Li1"><a href="/#" style="text-transform:none;"
+                  title="About Us">Vision and Mission</a></li>
+              <li id="Li2"><a href="/#" style="text-transform:none;"
+                  title="About Us">Our Core Values</a></li>
+            </ul>
+          </li>
+          <li id="lnkDirectorates" class="last-child"><a class="drop" href="#"
+              title="Organization">Organization</a>
+            <ul class="sub-menu">
+              <li id="subLnkPGC" class="last-child"><a href="#"
+                  title="Organization Chart">Organization Chart</a></li>
+              <li id="subLnkCampuses"><a href="#" title="Top Management">Top
+                  Management</a></li>
+              <li id="subLnkColleges" class="last-child"><a href="#"
+                  title="Directorate">Directorate</a></li>
+              <li id="Li1" class="last-child"><a href="#"
+                  title="Staff Strength">Staff Strength</a></li>
+            </ul>
+          </li>
+
+        </ul>
+      </nav>
+    </div>
+
+    <!-- HEADER END -->
+
+    <!-- FULL WIDTH SLIDER -->
+
+    <div class="wrapper full_width">
+      <div class="flex-container flex-rtl">
+        <div class="flexslider flex-homepage">
+          <div id="divList">
+            <ul class='flex-slides'>
+              <li class="banner-item">
+                <a href='#' target='_blank'>
+                  <img src='images/BannerImage/wide-banner.jpg' alt="Banner 1">
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- INTRO -->
+
+    <div class="wrapper row0">
+      <div id="intro" class="clear">
+        <ul class="nospace">
+          <ul class="nospace">
+            <li><a class="block" href="#">
+                <div class="block push30">
+                  <span class="cc circle icon-bullhorn"></span>
+                </div>
+                <h6 class="nospace">
+                  Gulmarg Gondola</h6>
+              </a></li>
+
+            <li><a class="block" href="#">
+                <div class="block push30">
+                  <span class="cc circle icon-pencil"></span>
+                </div>
+                <h6 class="nospace">
+                  Afarvat Cart Chari</h6>
+              </a></li>
+
+            <li><a class="block" href="#">
+                <div class="block push30">
+                  <span class="cc circle icon-bar-chart"></span>
+                </div>
+                <h6 class="nospace">
+                  Makhdoom Sahab chair lift</h6>
+              </a></li>
+            <li><a class="block" href="#">
+                <div class="block push30">
+                  <span class="cc circle icon-bar-chart"></span>
+                </div>
+                <h6 class="nospace">
+                  Jammu Cable Car</h6>
+              </a></li>
+          </ul>
+
+        </div>
+      </div>
+
+      <!-- CONTENT -->
+      <div class="wrapper row4">
+        <div role="main" class="container">
+
+          <div id="homepage">
+            <!-- ########################################################################################## -->
+            <!-- ########################################################################################## -->
+            <!-- ########################################################################################## -->
+            <div class="first">
+
+              <section class="clear">
+                <!-- Full-width About Us section -->
+                <h2><span>J&K Cable Car Corporation</span></h2>
+                <div class="col-1-1">
+                  <div class="col-1-3 first"><img class="boxholder"
+                      src="images/BannerImage/gulmarg-gondola-1.jpg" alt></div>
+                  <div class="col-2-3">
+                    <!-- <h3>About Us</h3> -->
+                    <p style="text-align:justify">The University of Jammu and
+                      Kashmir was founded in the year 1948. In the year 1969 it
+                      was bifurcated into two full-fledged Universities: J&K
+                      Cable Car Corporation at Srinagar and University of Jammu
+                      at Jammu. The University of Kashmir is situated at
+                      Hazratbal in Srinagar. It is flanked by the world famous
+                      Dal Lake on its eastern side and Nigeen Lake on the
+                      western side. The Main Campus of the University spread
+                      over 247 acres of </p>
+                    <br />
+                    <p><a href="/AboutUok.aspx">Read More &raquo;</a></p>
+                  </div>
+                </div>
+              </section>
+
+              <!-- Two-column layout for Upcoming Events and Notifications -->
+              <div class="clear">
+                <!-- Upcoming Events section (50% width) -->
+                <div class="col-1-2 first">
+                  <h2><span>Upcoming Events</span></h2>
+                  <ul id="lstEvents" class="nospace spacing push50"
+                    style="overflow:auto;">
+
+                    <li class='clear'
+                      title='Faculty Development Programme in Artificial Intelligence and
+Machine Learning.'><time datetime='2025-01-02T12+00:00'
+                        class='date-icon'><strong>Jan</strong>
+                        <em>05</em></time>
+                      <div>
+                        <p class='nospace times font-medium'><a
+                            href='/ForthComingEvents/401.pdf'
+                            target='_new'>Faculty
+                            Developmen...</a></p>
+                        <p class='nospace'>Faculty
+                          Development
+                          Programme
+                          in
+                          Artificial
+                          I...</p>
+                      </div>
+                    </li>
+                    <li class='clear'
+                      title='NEP-ORIENTATION AND SENSITIZATION PROGRAMME...'><time
+                        datetime='2025-01-07T12+00:00'
+                        class='date-icon'><strong>Jan</strong>
+                        <em>07</em></time>
+                      <div>
+                        <p class='nospace times font-medium'><a
+                            href='/ForthComingEvents/400.pdf'
+                            target='_new'>NEP-ORIENTATION
+                            AN...</a></p>
+                        <p class='nospace'>NEP-ORIENTATION
+                          AND
+                          SENSITIZATION
+                          PROGRAMME...</p>
+                      </div>
+                    </li>
+                    <li class='clear'
+                      title='Refresher Course in Earth System Sciences (Interdisciplinary)..'><time
+                        datetime='2025-01-14T12+00:00'
+                        class='date-icon'><strong>Jan</strong>
+                        <em>14</em></time>
+                      <div>
+                        <p class='nospace times font-medium'><a
+                            href='/ForthComingEvents/402.pdf'
+                            target='_new'>Refresher
+                            Course
+                            i...</a></p>
+                        <p class='nospace'>Refresher
+                          Course
+                          in
+                          Earth
+                          System
+                          Sciences
+                          (In...</p>
+                      </div>
+                    </li>
+                    <li class='clear'
+                      title='Programme Schedule for various Refresher Courses'><time
+                        datetime='2025-02-12T12+00:00'
+                        class='date-icon'><strong>Feb</strong>
+                        <em>12</em></time>
+                      <div>
+                        <p class='nospace times font-medium'><a
+                            href='/ForthComingEvents/391.pdf'
+                            target='_new'>Programme
+                            Schedule...</a></p>
+                        <p class='nospace'>Programme
+                          Schedule
+                          for
+                          various
+                          Refresher
+                          Cour...</p>
+                      </div>
+                    </li>
+                  </ul>
+                  <!-- /Upcoming Events -->
+                </div>
+
+                <!-- Notifications and Announcements section (50% width) -->
+                <div class="col-1-2">
+                  <h2><span>Notifications and Announcements</span></h2>
+                  <div class="accordion-wrapper">
+                    <a href="javascript:void(0)"
+                      class="accordion-title active"><span>Notifications</span></a>
+                    <div class="accordion-content default"
+                      style="height:245px; overflow:auto">
+                      <p>
+                        <ul id="lstNewsAndAnnouncements" class="list doughnut">
+                          <li><a href='https:events/9641.pdf'
+                              target='_new'>General Merit of Candidates who
+                              have
+                              applied for BS 4 Year UndergraduateProgramme
+                              (FYUGP) through Design Your Degree (DYD) and
+                              have
+                              attended counselling; Dated:
+                              <b>28-12-2024</b></a>
+                            <li><a href='https:events/9640.pdf'
+                                target='_new'>Advertisement Notice No.3 for
+                                the
+                                Post of Research Investigator and Field
+                                Investigator.; Dated:
+                                <b>28-12-2024</b></a>
+                            </ul><a href="/notifications.aspx"
+                              style="color:Black; text-align:center; font-weight:bold">View
+                              All
+                              Notifications</a>
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="accordion-wrapper"><a
+                          href="javascript:void(0)"
+                          class="accordion-title"><span>Admissions</span></a>
+                        <div class="accordion-content"
+                          style="height:245px; overflow:auto">
+                          <p>
+                            <ul id="lstAdmissions" class="list doughnut">
+
+                              <li><a
+                                  href='https://egov.uok.edu.in/eservices/pgadmission/prelogin/OnlinePayFee.aspx'
+                                  target='_new'>
+                                  Admission
+                                  Fee
+                                  Link
+                                  for
+                                  For
+                                  PG
+                                  &
+                                  Integrated
+                                  programmes
+                                  1st
+                                  Semester-2024</a>
+                                <li><a
+                                    href='https://egov.uok.edu.in/eservices/DeanAcademicAffairs/PreLogin/ApplicationCorpusFund.aspx'
+                                    target='_new'>
+                                    Application
+                                    Form
+                                    For
+                                    Grant
+                                    of
+                                    Financial
+                                    Assistance
+                                    under
+                                    the
+                                    Students
+                                    AID
+                                    Corpus
+                                    Fund
+                                    Scheme
+                                    (Batch
+                                    2024)</a>
+                                  <li><a
+                                      href='https://egov.uok.edu.in/eservices//bedpvtcolleges/prelogin/AdmissionFormBEd.aspx'
+                                      target='_new'>
+                                      Admission
+                                      Form
+                                      for
+                                      B.Ed
+                                      Programme
+                                      (Private
+                                      Colleges)
+                                      Session
+                                      2024-26</a>
+
+                                  </ul>
+                                </p>
+                              </div>
+                            </div>
+                            <div class="accordion-wrapper"><a
+                                href="javascript:void(0)"
+                                class="accordion-title prc"><span>Public
+                                  Relations
+                                  Centre</span></a>
+                              <div class="accordion-content prcD"
+                                style="height:245px; overflow:auto">
+                                <p>
+                                  <ul id="lstAlerts" class="list doughnut">
+
+                                  </ul>
+                                </p>
+                              </div>
+                            </div>
+
+                            <div class="clear"></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- service section -->
+                      <section class="clear">
+                        <div class="first">
+                          <h2><span>Services</span></h2>
+                          <div class="services-grid">
+                          <ul class="nospace spacing services-list">
+                            <li class="services-item">
+                              <a class="button block pad20 maroon clear"
+                                href="https://egov.uok.edu.in/eservices/EasyCollectOnlineFee/PreLogin/Default.aspx">
+                                <span class="icon-money icon-2x imgl"></span>
+                                <p class="nospace times font-medium">Pay Fee
+                                  Online</p>
+                                <p class="nospace">For Offline Applications</p>
+                              </a>
+                            </li>
+                            <li class="services-item">
+                              <a class="button block pad20 purple clear"
+                                href="/uokmail.aspx">
+                                <span
+                                  class="icon-envelope-alt icon-2x imgl"></span>
+                                <p class="nospace times font-medium">KU Mail</p>
+                                <p class="nospace">Official e-Mail Service</p>
+                              </a>
+                            </li>
+                            <li class="services-item">
+                              <a class="button block pad20 green clear"
+                                href="/jobs.aspx">
+                                <span
+                                  class="icon-briefcase icon-2x imgl"></span>
+                                <p
+                                  class="nospace times font-medium">Jobs/Recruitment</p>
+                                <p class="nospace">Advertisements,Call
+                                  Letters</p>
+                              </a>
+                            </li>
+                            <li class="services-item">
+                              <a class="button block pad20 orange clear"
+                                href="/tenders.aspx">
+                                <span
+                                  class="icon-file-text-alt icon-2x imgl"></span>
+                                <p class="nospace times font-medium">Tenders</p>
+                                <p class="nospace">Notices,eTenders...</p>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                        </div>
+                      </section>
+
+                    </div>
+
+                    <!-- ########################################################################################## -->
+                    <!-- ########################################################################################## -->
+                    <!-- ########################################################################################## -->
+                  </div>
+
+                  <div class="clear">
+                  </div>
+                  <!-- Ensure That Everything Has Been Cleared -->
+                </div>
+                <!-- End class=container -->
+              </div>
+              <!-- End wrapper row4 -->
+
+              <!-- Feedback Form -->
+              <div class="wrapper row5">
+                <div class="container">
+                  <h2><span>Feedback Form</span></h2>
+                  <form action="#" method="post" class="feedback-form">
+                    <div class="form-group">
+                      <label for="name">Name:</label>
+                      <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="email">Email:</label>
+                      <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="subject">Subject:</label>
+                      <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="message">Message:</label>
+                      <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <div class="form-group">
+                      <button type="submit" class="btn">Submit Feedback</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              
+
+              <!-- FOOTER -->
+              <div class="wrapper row6">
+                <footer role="contentinfo" id="p-footer" class="clear center">
+                  <!-- BLOCK 1 -->
+                  <div class="col-1-4 first">
+                    <a href="https://egov.uok.edu.in/feedbackforum"
+                      style="color:inherit">
+                      <div class="block push30"><span
+                          class="cc circle icon-paste"></span></div>
+                      <h6 class="push20">Feedback
+                        Forum</h6>
+                      <p class="nospace">Comment,
+                        Suggestion</p>
+                      <p class="nospace">Grievance
+                        ....</p>
+                    </a>
+                  </div>
+                  <!-- BLOCK 2 -->
+                  <div class="col-1-4">
+                    <a href="/Directory.aspx" style="color:inherit;">
+                      <div class="block push30"><span
+                          class="cc circle icon-phone"></span></div>
+                      <h6 class="push20">Telephone
+                        Directory</h6>
+                      <p class="nospace">+91
+                        194
+                        227
+                        2096</p>
+                      <p class="nospace">+91
+                        194
+                        227
+                        2097</p>
+                    </a>
+                  </div>
+                  <!-- BLOCK 3 -->
+                  <div class="col-1-4">
+                    <div class="block push30"><span
+                        class="cc circle icon-envelope-alt"></span></div>
+                    <h6 class="push20">Email</h6>
+                    <p class="nospace"><a href="Default.aspx#"
+                        style="color:White">info@uok.edu.in</a><br>
+                      <a href="Default.aspx#"
+                        style="color:White">pro@uok.edu.in</a>
+                    </p>
+                  </div>
+                  <!-- BLOCK 4 -->
+                  <div class="col-1-4">
+
+                    <a href="/contact.aspx" style="color:inherit;">
+                      <div class="block push30"><span
+                          class="cc circle icon-map-marker"></span></div>
+
+                      <h6 class="push20">Address</h6>
+                      <address>
+                        Hazratbal,
+                        Srinagar<br>
+                        J&K,
+                        India
+                        190006
+                      </address>
+                    </a>
+                  </div>
+                </footer>
+                <!-- COPYRIGHT -->
+                <div id="copyright" class="clear">
+                  
+                  <div class="fl_left">Copyright&copy;2025
+                    Jammu & Kashmir Cable Car Corporation |
+                    <a
+                      href="/disclaimer.aspx">Disclaimer</a>
+                  </div>
+                  <div class="fl_right">
+                    <ul class="nospace inline">
+                      <li><a href="https://itss.uok.edu.in"
+                          target="_blank">Developed
+                          &
+                          Maintained
+                          By: Goodwit IT Solutions Pvt. Ltd.</a></li>
+                  
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- END FOOTER -->
+
+              <!-- BACK TO TOP BUTTON -->
+              <a href="Default.aspx#top" id="scrolltotop"
+                title="Back To Top"><span
+                  class="icon-arrow-up icon-2x"></span></a>
+
+              <!-- Footer END -->
+
+              <!-- JAVASCRIPTS -->
+              <!-- JS START -->
+              <!-- JAVASCRIPTS -->
+              <!-- <script src="http://code.jquery.com/jquery-latest.min.js"></script> -->
+              <script src="layout/scripts/jquery-latest.min.js"></script>
+              <!-- <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script> -->
+              <script src="layout/scripts/jquery-ui.min.js"></script>
+              <!-- Media -->
+              <script src="layout/scripts/fitvids/jquery.fitvids.js"></script>
+              <!-- Custom Settings -->
+              <script src="layout/scripts/custom.js"></script>
+              <script>
+  
+  </script>
+
+              <!-- JS END -->
+              <!-- Slider -->
+              <script
+                src="layout/scripts/flexslider/jquery.flexslider-min.js"></script>
+              <script
+                src="layout/scripts/flexslider/jquery.flexslider-setup.js"></script>
+
+              <script>
+    $(document).ready(function () {
+      //            $("#lstEvents").niceScroll({ autohidemode: true, cursorcolor:layoutColor});
+      //            $(".accordion-content").niceScroll({ autohidemode: true, cursorcolor: layoutColor });
+      //            $(".alert-msg").niceScroll({ autohidemode: true, cursorcolor: layoutColor });
+      $("li.active").removeClass("active");
+      $("#lnkHome").addClass("active");
+    });
+  </script>
+              <script src="JWPlayer/jwplayer.js"
+                type="text/javascript"></script>
+              <script type="text/javascript">
+    jwplayer("player").setup({
+      autostart: false,
+      image: "images/demo/video0.png",
+      flashplayer: "jwplayer/player.swf",
+      file: "video/Tarana.flv",
+      width: 250,
+      height: 200
+    });
+
+
+
+  </script>
+            </form>
+          </body>
+
+        </html>
