@@ -124,32 +124,40 @@
 
 /* end of banner */
 
-/* start of footer */
-#footer {
-    background-color: #24320e;
-}
-
-.footer-container {
-    padding: 2rem;
-    width: 90%;
-    margin: 0 auto;
-
-}
-
+/* start of project icon */
 
 .project-icons {
-    background-color: #6B8E23;
-    /* Green color */
-    color: white;
-    font-family: Arial, sans-serif;
-    font-size: 18px;
-    text-transform: uppercase;
-    text-align: center;
-    font-weight: bold;
-    padding: 10px 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    background-color: #6B8E23;
 }
+
+.project-icon {
+    flex: 1;
+    padding: 1.5rem;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.125rem;
+    border-right: 1px solid #1a2409;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.project-icon:last-child {
+    border-right: none;
+}
+
+.project-icon:hover {
+    background-color: #2d3e12;
+    text-decoration: underline;
+    color: white;
+}
+
+/* end of project icon */
+
+/* start of main */
 
 .container {
     width: 90%;
@@ -254,9 +262,14 @@
     font-weight: bold;
     cursor: pointer;
 }
-.service-container .service a{
+.service-container a.service {
     color: white;
     text-decoration: none;
+}
+
+.service-container a.service:hover{
+    text-decoration: underline;
+    background: #d2691e;
 }
 
 .service-container .service:nth-child(1) {
@@ -274,6 +287,10 @@
 .service-container .service:nth-child(4) {
     background: #d2691e;
 }
+
+/* end of main */
+
+/* start of feedback form */
 
 .form-container {
     width: 100%;
@@ -362,6 +379,12 @@
     background-color: #45a049;
 }
 
+/* end of feedback form */
+
+/* start of footer */
+#footer {
+    background-color: #24320e;
+}
 
 .footer {
     background-color: #2a4229;
