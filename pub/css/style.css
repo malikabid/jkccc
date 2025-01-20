@@ -264,6 +264,23 @@
     .service-container .service {
         width: 100%;
     }
+
+    .footer-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .footer-item {
+        width: 100%;
+        max-width: none;
+        text-align: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
 /* end of header */
 
@@ -568,6 +585,23 @@
 
     .service-container .service {
         width: 90%;
+    }
+
+    .footer-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .footer-item {
+        width: 100%;
+        max-width: none;
+        text-align: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
     }
 }
 
