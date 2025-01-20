@@ -86,32 +86,6 @@
     .contact-item {
         padding: 0.25rem;
     }
-    
-    .navbar-list {
-        display: none;
-    }
-    
-    .navbar.active .navbar-list {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        position: absolute;
-        background: #fff;
-        top: 100%;
-        left: 0;
-        padding: 1rem;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    
-    .menu-button {
-        display: block;
-        width: 100%;
-        padding: 0.5rem;
-        background: #24320e;
-        color: white;
-        border: none;
-        cursor: pointer;
-    }
 }
 
 .contact-item {
@@ -129,18 +103,23 @@
 
 .menu-button {
     display: none;
-    /* Hidden by default */
-    background-color: transparent;
-    color: #686868;
-    border: 1px solid #e3e2e1;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    text-transform: uppercase;
-    cursor: pointer;
+    background: #24320e;
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    width: 100%;
     text-align: left;
-    width: 90%;
-    margin: 0rem auto;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+}
 
+.menu-button::after {
+    content: '☰';
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .navbar-list {
@@ -206,6 +185,61 @@
     /* Ensure text remains visible */
 }
 
+/* Mobile styles */
+@media screen and (max-width: 768px) {
+    .menu-button {
+        display: block;
+    }
+
+    .navbar-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding-left: 0 !important;
+        background: #f1f1f1;
+    }
+
+    .navbar-list li {
+        width: 100%;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .navbar-list li:last-child {
+        border-bottom: none;
+    }
+
+    .navbar-list li a {
+        padding: 15px 20px;
+    }
+
+    /* Dropdown styling for mobile */
+    .navbar-list ul {
+        position: static;
+        display: none;
+        width: 100%;
+        box-shadow: none;
+        background: #e5e5e5;
+    }
+
+    .navbar-list li:hover > ul {
+        display: none; /* Prevent hover showing dropdown on mobile */
+    }
+
+    /* Show dropdowns when parent is active */
+    .navbar-list li.active > ul {
+        display: block;
+    }
+
+    /* Show menu when navbar is active */
+    .navbar.active .navbar-list {
+        display: flex;
+    }
+
+    /* Change hamburger to X when menu is open */
+    .navbar.active .menu-button::after {
+        content: '×';
+    }
+}
 /* end of header */
 
 /* start of banner */

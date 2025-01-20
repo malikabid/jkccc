@@ -18,9 +18,20 @@ document.querySelectorAll('.navbar-list li a').forEach(link => {
 });
 
 
-document.querySelector('.menu-button').addEventListener('click', function () {
-    const navbar = document.querySelector('.navbar');
-    navbar.classList.toggle('active'); // Toggles the "active" class to show/hide the dropdown
+// Menu toggle functionality
+document.querySelector('.menu-button').addEventListener('click', function() {
+    document.querySelector('.navbar').classList.toggle('active');
+});
+
+// Handle submenu toggles on mobile
+document.querySelectorAll('.navbar-list li > a').forEach(link => {
+    link.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768 && this.nextElementSibling) {
+            e.preventDefault();
+            const parentLi = this.parentElement;
+            parentLi.classList.toggle('active');
+        }
+    });
 });
 
 /** Hero banner slider */
