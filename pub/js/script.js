@@ -23,17 +23,15 @@ document.querySelector('.menu-button').addEventListener('click', function() {
     document.querySelector('.navbar').classList.toggle('active');
 });
 
-// Handle submenu toggles on mobile
-document.querySelectorAll('.navbar-list li > a').forEach(link => {
-    link.addEventListener('click', function(e) {
-        if (window.innerWidth <= 768 && this.nextElementSibling) {
-            e.preventDefault();
-            const parentLi = this.parentElement;
-            parentLi.classList.toggle('active');
-        }
-    });
-});
 
+// Hide mobile menu when clicking outside
+document.addEventListener('click', function(e) {
+    const navbar = document.querySelector('.navbar');
+    const menuButton = document.querySelector('.menu-button');
+    if (!navbar.contains(e.target) && !menuButton.contains(e.target)) {
+        navbar.classList.remove('active');
+    }
+});
 /** Hero banner slider */
 
 /* filepath: /Users/abidhussainmalik/Sites/kashmiruniversity/www.kashmiruniversity.net/pub/js/slider.js */
