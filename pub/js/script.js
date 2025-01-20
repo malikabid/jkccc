@@ -5,10 +5,18 @@ document.querySelectorAll('.navbar-list li a').forEach(link => {
             item.classList.remove('active');
         });
 
-        // Add active class to the parent <li> of the clicked <a>
-        this.parentElement.classList.add('active');
+        // Add active class to the clicked item's parent <li>
+        const currentLi = this.parentElement;
+        currentLi.classList.add('active');
+
+        // Find parent menu item and add active class
+        const parentLi = currentLi.closest('ul').closest('li');
+        if (parentLi) {
+            parentLi.classList.add('active');
+        }
     });
 });
+
 
 document.querySelector('.menu-button').addEventListener('click', function () {
     const navbar = document.querySelector('.navbar');

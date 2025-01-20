@@ -5,38 +5,114 @@
 
 /* start of header */
 #header {
-    padding: 1.5rem 0rem;
-    padding-bottom: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
     display: flex;
     justify-content: space-between;
-    padding: 0.5rem;
+    align-items: center;
 }
 
 .logo-and-title {
-    display: grid;
+    display: flex;
     align-items: center;
-    grid-template-columns: repeat(3, auto);
-    gap: 5px;
-    row-gap: 0px;
+    gap: 1rem;
 }
 
-.logo-and-title .title {
-    font-size: 28px;
-    font-weight: 500;
+.logo {
+    width: 60px;
+    height: auto;
+}
+
+.title {
+    font-size: 1.5rem;
+    color: #333;
     text-decoration: none;
-    color: #686868;
-
-
 }
 
 .contact-info {
     display: flex;
-    align-items: center;
-    gap: 2.5rem;
+    gap: 1.5rem;
+}
 
+/* Tablet View */
+@media screen and (max-width: 1024px) {
+    .header-container {
+        padding: 0.75rem;
+    }
+    
+    .title {
+        font-size: 1.25rem;
+    }
+    
+    .contact-info {
+        gap: 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Mobile View */
+@media screen and (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .logo-and-title {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .logo {
+        width: 45px;
+    }
+    
+    .title {
+        font-size: 1.3rem;
+    }
+    
+    .contact-info {
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.9rem;
+        padding-bottom: 0.5rem;
+    }
+    .contact-item {
+        padding: 0.25rem;
+    }
+    
+    .navbar-list {
+        display: none;
+    }
+    
+    .navbar.active .navbar-list {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        background: #fff;
+        top: 100%;
+        left: 0;
+        padding: 1rem;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    .menu-button {
+        display: block;
+        width: 100%;
+        padding: 0.5rem;
+        background: #24320e;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
 }
 
 .contact-item {
@@ -71,26 +147,52 @@
 .navbar-list {
     display: flex;
     list-style: none;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     padding-left: 5%;
 }
 
-
-
-.navbar-list a {
-    text-decoration: none;
-    color: #686868;
-    font-weight: 300;
-    text-transform: uppercase;
-    padding: 1rem;
-    display: block;
-    /* Makes the entire area clickable */
-    transition: background-color 0.3s, color 0.3s;
+.navbar-list li {
+    position: relative;
 }
 
-.navbar-list li {
-    border-top: 2px solid transparent;
+.navbar-list li a {
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+    color: #333;
+}
+
+.navbar-list li:hover > a {
+    background-color: #24320e;
+    color: white;
+}
+
+/* Dropdown styling */
+.navbar-list ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background:#f1f1f1;
+    min-width: 200px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 1000;
+    list-style: none;
+    padding: 0;
+}
+
+.navbar-list li:hover > ul {
+    display: block;
+}
+
+.navbar-list ul li {
+    width: 100%;
+}
+
+.navbar-list ul li a {
+    padding: 0.75rem 1rem;
+    color: #333;
 }
 
 /* Active State */
@@ -100,7 +202,7 @@
 
 }
 
-.navbar-list li.active a {
+.navbar-list li.active > a {
     color: #fff;
     /* Ensure text remains visible */
 }
@@ -491,17 +593,10 @@
 }
 
 /* end of footer */
-
+/**
 @media screen and (max-width: 768px) {
     .navbar {
         padding: 1rem 0;
-    }
-
-    .contact-info {
-        flex-direction: column;
-        gap: 1rem;
-        justify-content: center;
-        align-items: start;
     }
 
     .logo-and-title {
@@ -520,7 +615,6 @@
 
     .navbar.active .navbar-list {
         display: flex;
-        /* Show the navbar list when active */
         flex-direction: column;
         margin: 0px auto;
         padding: 0px;
@@ -541,3 +635,4 @@
     }
 
 }
+    */
