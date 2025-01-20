@@ -239,6 +239,22 @@
     .navbar.active .menu-button::after {
         content: '×';
     }
+
+    /* Responsive project-icons */
+    .project-icons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-icon {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #1a2409;
+    }
+
+    .project-icon:last-child {
+        border-bottom: none;
+    }
 }
 /* end of header */
 
