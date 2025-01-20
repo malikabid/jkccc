@@ -523,15 +523,31 @@
 
 .about-section .content {
     width: 60%;
+    background-color: #f1f1f1; /* Light background */
+    padding: 20px; /* Add padding */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border: 1px solid #ddd; /* Add border similar to notifications */
+}
+
+.about-section .content h2 {
+    color: #333; /* Darker heading color */
+    margin-bottom: 10px;
 }
 
 .about-section .content p {
     margin: 10px 0;
+    line-height: 1.6; /* Increase line height for readability */
 }
 
 .about-section .content a {
     color: #006400;
     text-decoration: none;
+    font-weight: bold; /* Bold links */
+}
+
+.about-section .content a:hover {
+    text-decoration: underline; /* Underline on hover */
 }
 
 /* Mobile styles */
@@ -576,6 +592,7 @@
 
     .about-section .content {
         width: 100%;
+        box-sizing: border-box; /* Ensure padding is included in width */
     }
 
     .service-container {
