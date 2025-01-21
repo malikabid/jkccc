@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y \
     && docker-php-ext-install -j$(nproc) curl
 
 # Install Composer
-COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+# COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 # Set the working directory
 WORKDIR /var/www/html
@@ -19,7 +19,7 @@ WORKDIR /var/www/html
 COPY . .
 
 # Install PHP dependencies
-RUN composer install
+# RUN composer install
 
 # Expose port 
 EXPOSE 80
