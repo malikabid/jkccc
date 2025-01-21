@@ -28,6 +28,14 @@ async function initialize() {
         });
     });
 
+    // Set active class based on current URL
+    const currentPath = window.location.pathname;
+    document.querySelectorAll('.navbar-list li a').forEach(link => {
+        if (link.getAttribute('href') === currentPath) {
+            link.parentElement.classList.add('active');
+        }
+    });
+
     // Menu toggle functionality
     document.querySelector('.menu-button').addEventListener('click', function() {
         document.querySelector('.navbar').classList.toggle('active');

@@ -629,7 +629,57 @@
     }
 }
 
-/* end of main */
+/* About Us Styles */
+#about-us {
+    padding: 40px 0;
+    background-color: #f9f9f9;
+}
+
+#about-us .container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+    text-align: center;
+}
+
+#about-us h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#about-us p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Tablet View */
+@media screen and (max-width: 1024px) {
+    #about-us h2 {
+        font-size: 1.75rem;
+    }
+
+    #about-us p {
+        font-size: 0.95rem;
+    }
+}
+
+/* Mobile View */
+@media screen and (max-width: 768px) {
+    #about-us {
+        padding: 20px 0;
+    }
+
+    #about-us h2 {
+        font-size: 1.5rem;
+    }
+
+    #about-us p {
+        font-size: 0.9rem;
+    }
+}
 
 /* start of feedback form */
 
