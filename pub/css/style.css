@@ -16,6 +16,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1200px;
 }
 
 .logo-and-title {
@@ -132,9 +133,10 @@
 .navbar-list {
     display: flex;
     list-style: none;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     padding-left: 5%;
+    max-width: 1200px;
 }
 
 .navbar-list li {
@@ -289,6 +291,24 @@
         gap: 10px;
     }
 }
+
+/* Tablet View */
+@media screen and (max-width: 1024px) {
+    .project-icons .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-icon {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #1a2409;
+    }
+
+    .project-icon:last-child {
+        border-bottom: none;
+    }
+}
 /* end of header */
 
 /* start of banner */
@@ -366,8 +386,16 @@
 
 .project-icons {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Center the icons */
     background-color: #6B8E23;
+    width: 100%; /* Full width green bar */
+}
+
+.project-icons .container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px; /* Limit the width of the icons */
+    padding: 0 20px; /* Add padding for spacing */
 }
 
 .project-icon {
@@ -694,7 +722,7 @@
 
 .form {
     width: 80%;
-    max-width: 750px;
+    max-width: 1200px;
     padding: 20px;
     background-color: #5A8A0F;
     border: 2px solid #fff;
@@ -1028,9 +1056,9 @@
     background-color: #f9f9f9;
 }
 
-#project-details .container {
+.container {
     width: 90%;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     max-width: 1200px;
 }
 
