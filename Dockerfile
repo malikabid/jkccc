@@ -1,28 +1,14 @@
-# Use the latest stable PHP image
+# Use the official PHP 8.2.20 image with Apache as the base image
 FROM php:8.2.20-apache
-
-# Install necessary PHP extensions
-RUN apt-get update && apt-get install -y \
-    libssl-dev \
-    libcurl4-openssl-dev \
-    pkg-config \
-    libmcrypt-dev \
-    && docker-php-ext-install -j$(nproc) curl
-
-# Install Composer
-# COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 # Set the working directory
 WORKDIR /var/www/html
 
-# Copy the current directory contents into the container
+# Copy the application files
 COPY . .
 
-# Install PHP dependencies
-# RUN composer install
-
-# Expose port 
+# Expose the port
 EXPOSE 80
 
-# Command to run the PHP script
-CMD ["php", "src/info.php"]
+# Start the Apache server
+CMD ["apache2-foreground"]
