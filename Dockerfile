@@ -1,5 +1,5 @@
 # Use the latest stable PHP image
-FROM php:latest
+FROM php:8.2.20-apache
 
 # Install necessary PHP extensions
 RUN apt-get update && apt-get install -y \
@@ -25,4 +25,4 @@ COPY . .
 EXPOSE 80
 
 # Command to run the PHP script
-CMD ["php", "./info.php"]
+CMD ["php", "src/info.php"]
