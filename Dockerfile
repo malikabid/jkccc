@@ -21,8 +21,8 @@ COPY . .
 # Install PHP dependencies
 RUN composer install
 
-# Expose port 25 for SMTP
-EXPOSE 25
+# Expose port 
+EXPOSE 80
 
 # Command to run the PHP script
 CMD ["php", "./info.php"]
