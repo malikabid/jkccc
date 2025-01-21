@@ -794,16 +794,20 @@
 
 #contact-us .contact-info {
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-#contact-us .contact-info p {
+#contact-us .address-info p {
     font-size: 1rem;
     color: #666;
     line-height: 1.6;
+    margin: 5px 0;
 }
 
 #contact-us .map-container {
-    margin-bottom: 20px;
+    margin: 20px 0;
 }
 
 #contact-us .form-container {
@@ -897,6 +901,11 @@
     #contact-us .contact-info p {
         font-size: 0.95rem;
     }
+
+    #contact-us .map-container iframe {
+        width: 100%;
+        height: 400px;
+    }
 }
 
 /* Mobile View */
@@ -915,6 +924,11 @@
 
     #contact-us .form {
         width: 90%;
+    }
+
+    #contact-us .map-container iframe {
+        width: 100%;
+        height: 300px;
     }
 }
 
