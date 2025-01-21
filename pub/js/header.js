@@ -5,8 +5,8 @@ async function loadComponent(url, placeholderId) {
 }
 
 async function initialize() {
-    await loadComponent('header.html', 'header-placeholder');
-    await loadComponent('footer.html', 'footer-placeholder');
+    await loadComponent('/header.html', 'header-placeholder');
+    await loadComponent('/footer.html', 'footer-placeholder');
 
     // Add event listeners after loading the header
     document.querySelectorAll('.navbar-list li a').forEach(link => {
@@ -33,6 +33,12 @@ async function initialize() {
     document.querySelectorAll('.navbar-list li a').forEach(link => {
         if (link.getAttribute('href') === currentPath) {
             link.parentElement.classList.add('active');
+
+            // Find parent menu item and add active class
+            const parentLi = link.parentElement.closest('ul').closest('li');
+            if (parentLi) {
+                parentLi.classList.add('active');
+            }
         }
     });
 
