@@ -1,76 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gulmarg Gondola - Jammu & Kashmir Cable Car Corporation</title>
-    <link rel="stylesheet" href="../pub/css/style.css">
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="icon" href="../favicon.ico" type="image/x-icon">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gulmarg Gondola - Jammu & Kashmir Cable Car Corporation</title>
+        <link rel="stylesheet" href="../pub/css/style.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+            integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
 
-<body>
-    <!-- Include header -->
-    <div id="header-placeholder"></div>
+        <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    </head>
 
-    <main>
-        <section id="project-banner" class="banner">
-            <img src="../pub/images/gulmarg/gulmarg-gondola-banner.jpg" alt="Gulmarg Gondola">
-            <div class="banner-overlay">
-                <h1>Gulmarg Gondola</h1>
-            </div>
-        </section>
+    <body>
+        <!-- Include header -->
+        <div id="header-placeholder"></div>
 
-        <section id="project-details">
-            <div class="container">
-                <h2>Project Introduction</h2>
-                <p>The Gulmarg Gondola is one of the highest cable cars in the world, located in the beautiful region of Gulmarg, Jammu & Kashmir. It offers breathtaking views of the snow-capped mountains and lush green meadows.</p>
-                <h2>Project Features</h2>
-                <ul>
-                    <li>Highest cable car in the world</li>
-                    <li>Stunning views of the Himalayas</li>
-                    <li>Two-stage ropeway system</li>
-                    <li>Modern and safe cabins</li>
-                    <li>Popular tourist attraction</li>
-                </ul>
-            </div>
-        </section>
-
-        <section id="project-gallery">
-            <div class="container">
-                <h2>Image Gallery</h2>
-                <div class="carousel-container">
-                    <button class="carousel-button prev">&lt;</button>
-                    <div class="carousel">
-                        <img src="../pub/images/gulmarg/gulmarg-gondola00001.jpeg" alt="Gulmarg Gondola">
-                        <img src="../pub/images/gulmarg/gulmarg-gondola00002.jpeg" alt="Gulmarg Gondola">
-                        <img src="../pub/images/gulmarg/gulmarg-gondola00003.jpeg" alt="Gulmarg Gondola">
-                        <img src="../pub/images/gulmarg/gulmarg-gondola00004.jpg" alt="Gulmarg Gondola">
-                        <img src="../pub/images/gulmarg/gulmarg-gondola00005.jpeg" alt="Gulmarg Gondola">
-                    </div>
-                    <button class="carousel-button next">&gt;</button>
+        <main>
+            <section id="project-banner" class="banner">
+                <img src="../pub/images/gulmarg/gulmarg-gondola-banner.jpg"
+                    alt="Gulmarg Gondola">
+                <div class="banner-overlay">
+                    <h1>Gulmarg Gondola</h1>
                 </div>
+            </section>
+
+            <section id="project-details">
+                <div class="container">
+                    <h2>Project Introduction</h2>
+                    <p>The Gulmarg Gondola is one of the highest cable cars in
+                        the world, located in the beautiful region of Gulmarg,
+                        Jammu & Kashmir. It offers breathtaking views of the
+                        snow-capped mountains and lush green meadows.</p>
+                    <h2>Project Features</h2>
+                    <ul>
+                        <li>Highest cable car in the world</li>
+                        <li>Stunning views of the Himalayas</li>
+                        <li>Two-stage ropeway system</li>
+                        <li>Modern and safe cabins</li>
+                        <li>Popular tourist attraction</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="project-gallery">
+                <div class="container">
+                    <h2>Image Gallery</h2>
+                    <div class="slider-wrapper">
+                        <button id="prev-slide"
+                            class="slide-button material-symbols-rounded">
+                            chevron_left
+                        </button>
+                        <ul class="image-list">
+                            <img class="image-item"
+                                src="../pub/images/gulmarg/gulmarg-gondola00001.jpeg"
+                                alt="Gulmarg Gondola">
+                            <img class="image-item"
+                                src="../pub/images/gulmarg/gulmarg-gondola00002.jpeg"
+                                alt="Gulmarg Gondola">
+                            <img class="image-item"
+                                src="../pub/images/gulmarg/gulmarg-gondola00003.jpeg"
+                                alt="Gulmarg Gondola">
+                            <img class="image-item"
+                                src="../pub/images/gulmarg/gulmarg-gondola00004.jpg"
+                                alt="Gulmarg Gondola">
+                            <img class="image-item"
+                                src="../pub/images/gulmarg/gulmarg-gondola00005.jpeg"
+                                alt="Gulmarg Gondola">
+                        </ul>
+                        <button id="next-slide"
+                            class="slide-button material-symbols-rounded">
+                            chevron_right
+                        </button>
+                    </div>
+                    <div class="slider-scrollbar">
+                        <div class="scrollbar-track">
+                            <div class="scrollbar-thumb"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Add the lightbox container -->
+            <div class="lightbox">
+                <button class="close">&times;</button>
+                <button class="prev">&lt;</button>
+                <img src alt="Zoomed Image">
+                <button class="next">&gt;</button>
             </div>
-        </section>
+        </main>
 
-        <!-- Add the lightbox container -->
-        <div class="lightbox">
-            <button class="close">&times;</button>
-            <button class="prev">&lt;</button>
-            <img src="" alt="Zoomed Image">
-            <button class="next">&gt;</button>
-        </div>
-    </main>
+        <!-- Include footer -->
+        <div id="footer-placeholder"></div>
 
-    <!-- Include footer -->
-    <div id="footer-placeholder"></div>
-    
-    <script src="../pub/js/header.js"></script>
-    <script src="../pub/js/slider.js"></script>
-</body>
+        <script src="../pub/js/header.js"></script>
+        <script src="../pub/js/gallery.js"></script>
+        <link rel="stylesheet" href="../pub/css/gallery.css">
+    </body>
 
 </html>
