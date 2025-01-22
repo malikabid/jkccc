@@ -11,7 +11,7 @@ body {
 #header {
     width: 100%;
     background: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .header-container {
@@ -50,11 +50,11 @@ body {
     .header-container {
         padding: 0.75rem;
     }
-    
+
     .title {
         font-size: 1.25rem;
     }
-    
+
     .contact-info {
         gap: 1rem;
         font-size: 0.9rem;
@@ -66,35 +66,39 @@ body {
     .header-container {
         flex-direction: column;
         gap: 1rem;
-        align-items: center; /* Center align items */
+        align-items: center;
+        /* Center align items */
     }
-    
+
     .logo-and-title {
         width: 100%;
         justify-content: center;
-        flex-direction: column; /* Stack logo and title vertically */
+        flex-direction: column;
+        /* Stack logo and title vertically */
         align-items: center;
         gap: unset;
     }
-    
+
     .logo {
         width: 150px;
-        height: auto; /* Adjust height to cover both title and contact-info */
+        height: auto;
+        /* Adjust height to cover both title and contact-info */
     }
-    
+
     .title {
         font-size: 1.3rem;
     }
-    
+
     .contact-info {
         flex-direction: row;
         align-items: center;
         gap: 0.5rem;
         font-size: 0.9rem;
         padding-bottom: 0.5rem;
-        justify-content: center; /* Center align contact-info */
+        justify-content: center;
+        /* Center align contact-info */
     }
-    
+
     .contact-item {
         padding: 0.25rem;
     }
@@ -152,10 +156,11 @@ body {
     padding: 1rem;
     text-decoration: none;
     color: #333;
-    text-transform: capitalize; /* Capitalize navigation links */
+    text-transform: capitalize;
+    /* Capitalize navigation links */
 }
 
-.navbar-list li:hover > a {
+.navbar-list li:hover>a {
     background-color: #24320e;
     color: white;
 }
@@ -166,15 +171,15 @@ body {
     position: absolute;
     top: 100%;
     left: 0;
-    background:#f1f1f1;
+    background: #f1f1f1;
     min-width: 200px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     z-index: 1000;
     list-style: none;
     padding: 0;
 }
 
-.navbar-list li:hover > ul {
+.navbar-list li:hover>ul {
     display: block;
 }
 
@@ -194,7 +199,7 @@ body {
 
 }
 
-.navbar-list li.active > a {
+.navbar-list li.active>a {
     color: #fff;
     /* Ensure text remains visible */
 }
@@ -235,12 +240,13 @@ body {
         background: #e5e5e5;
     }
 
-    .navbar-list li:hover > ul {
-        display: none; /* Prevent hover showing dropdown on mobile */
+    .navbar-list li:hover>ul {
+        display: none;
+        /* Prevent hover showing dropdown on mobile */
     }
 
     /* Show dropdowns when parent is active */
-    .navbar-list li.active > ul {
+    .navbar-list li.active>ul {
         display: block;
     }
 
@@ -314,6 +320,7 @@ body {
         border-bottom: none;
     }
 }
+
 /* end of header */
 
 /* start of banner */
@@ -324,7 +331,8 @@ body {
 .slider-container {
     position: relative;
     width: 100%;
-    height: 400px; /* Set height to 400px */
+    height: 400px;
+    /* Set height to 400px */
     overflow: hidden;
 }
 
@@ -353,14 +361,16 @@ body {
 /* Tablet View */
 @media screen and (max-width: 1024px) {
     .slider-container {
-        height: 300px; /* Adjust height for tablet */
+        height: 300px;
+        /* Adjust height for tablet */
     }
 }
 
 /* Mobile View */
 @media screen and (max-width: 768px) {
     .slider-container {
-        height: 200px; /* Adjust height for mobile */
+        height: 200px;
+        /* Adjust height for mobile */
     }
 }
 
@@ -377,29 +387,34 @@ body {
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background: rgba(255,255,255,0.5);
+    background: rgba(255, 255, 255, 0.5);
     cursor: pointer;
 }
 
 .dot.active {
     background: white;
 }
+
 /* end of banner */
 
 /* start of project icon */
 
 .project-icons {
     display: flex;
-    justify-content: center; /* Center the icons */
+    justify-content: center;
+    /* Center the icons */
     background-color: #6B8E23;
-    width: 100%; /* Full width green bar */
+    width: 100%;
+    /* Full width green bar */
 }
 
 .project-icons .container {
     display: flex;
     justify-content: space-between;
-    max-width: 1200px; /* Limit the width of the icons */
-    padding: 0 20px; /* Add padding for spacing */
+    max-width: 1200px;
+    /* Limit the width of the icons */
+    padding: 0 20px;
+    /* Add padding for spacing */
     margin: 0;
 }
 
@@ -445,7 +460,8 @@ body {
 .events,
 .notifications,
 .services {
-    flex: 1 1 calc(50% - 20px); /* Two columns with gap */
+    flex: 1 1 calc(50% - 20px);
+    /* Two columns with gap */
     border: 1px solid #ddd;
     padding: 15px;
     border-radius: 5px;
@@ -482,13 +498,16 @@ body {
     border-radius: 5px;
     font-size: 14px;
     margin-right: 10px;
-    flex-shrink: 0; /* Ensure the date does not shrink */
+    flex-shrink: 0;
+    /* Ensure the date does not shrink */
     display: flex;
-    flex-direction: column; /* Display date in two lines */
+    flex-direction: column;
+    /* Display date in two lines */
 }
 
 .events .event .details {
-    flex-grow: 1; /* Allow details to take up remaining space */
+    flex-grow: 1;
+    /* Allow details to take up remaining space */
 }
 
 .events .event .details h4 {
@@ -523,12 +542,13 @@ body {
     font-weight: bold;
     cursor: pointer;
 }
+
 .service-container a.service {
     color: white;
     text-decoration: none;
 }
 
-.service-container a.service:hover{
+.service-container a.service:hover {
     text-decoration: underline;
     background: #d2691e;
 }
@@ -563,31 +583,40 @@ body {
 
 .about-section .content {
     width: 60%;
-    background-color: #f1f1f1; /* Light background */
-    padding: 20px; /* Add padding */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    border: 1px solid #ddd; /* Add border similar to notifications */
+    background-color: #f1f1f1;
+    /* Light background */
+    padding: 20px;
+    /* Add padding */
+    border-radius: 10px;
+    /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+    border: 1px solid #ddd;
+    /* Add border similar to notifications */
 }
 
 .about-section .content h2 {
-    color: #333; /* Darker heading color */
+    color: #333;
+    /* Darker heading color */
     margin-bottom: 10px;
 }
 
 .about-section .content p {
     margin: 10px 0;
-    line-height: 1.6; /* Increase line height for readability */
+    line-height: 1.6;
+    /* Increase line height for readability */
 }
 
 .about-section .content a {
     color: #006400;
     text-decoration: none;
-    font-weight: bold; /* Bold links */
+    font-weight: bold;
+    /* Bold links */
 }
 
 .about-section .content a:hover {
-    text-decoration: underline; /* Underline on hover */
+    text-decoration: underline;
+    /* Underline on hover */
 }
 
 /* Mobile styles */
@@ -597,18 +626,21 @@ body {
     }
 
     .notifications {
-        order: -1; /* Move notifications above events */
+        order: -1;
+        /* Move notifications above events */
     }
-    
+
     .events,
     .notifications,
     .services {
-        flex: 1 1 100%; /* Full width on mobile */
+        flex: 1 1 100%;
+        /* Full width on mobile */
     }
 
     .events .event,
     .notifications .notification {
-        flex-direction: row; /* Ensure row direction on mobile */
+        flex-direction: row;
+        /* Ensure row direction on mobile */
         align-items: center;
     }
 
@@ -632,7 +664,8 @@ body {
 
     .about-section .content {
         width: 100%;
-        box-sizing: border-box; /* Ensure padding is included in width */
+        box-sizing: border-box;
+        /* Ensure padding is included in width */
     }
 
     .service-container {
@@ -1027,7 +1060,7 @@ body {
 /* Project Page Styles */
 #project-banner {
     position: relative;
-    height: 500px;
+    height: 400px;
     overflow: hidden;
 }
 
@@ -1045,7 +1078,8 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    background: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent overlay */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1112,54 +1146,12 @@ body {
     margin-bottom: 20px;
 }
 
-#project-gallery .carousel-container {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-}
-
-#project-gallery .carousel {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-#project-gallery .carousel img {
-    width: 250px; /* Increase width */
-    height: 150px; /* Reduce height */
-    margin-right: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-#project-gallery .carousel img:last-child {
-    margin-right: 0;
-}
-
-/* Add the following styles */
-#project-gallery .carousel-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 1; /* Ensure buttons are above images */
-}
-
-#project-gallery .carousel-button.prev {
-    left: 0; /* Align to the left edge */
-}
-
-#project-gallery .carousel-button.next {
-    right: 0; /* Align to the right edge */
-}
 
 /* Tablet View */
 @media screen and (max-width: 1024px) {
-    #project-banner .banner-overlay h1 {
-        font-size: 2rem;
+
+    #project-banner {
+        height: 300px;
     }
 
     #project-details h2,
@@ -1171,17 +1163,12 @@ body {
     #project-details ul li {
         font-size: 0.95rem;
     }
-
-    #project-gallery .carousel img {
-        width: 200px; /* Adjust width for tablet */
-        height: 120px; /* Adjust height for tablet */
-    }
 }
 
 /* Mobile View */
 @media screen and (max-width: 768px) {
-    #project-banner .banner-overlay h1 {
-        font-size: 1.5rem;
+    #project-banner {
+        height: 200px;
     }
 
     #project-details h2,
@@ -1193,56 +1180,4 @@ body {
     #project-details ul li {
         font-size: 0.9rem;
     }
-
-    #project-gallery .carousel img {
-        width: 150px; /* Adjust width for mobile */
-        height: 100px; /* Adjust height for mobile */
-    }
-}
-
-/* Lightbox Styles */
-.lightbox {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-
-.lightbox img {
-    max-width: 90%;
-    max-height: 90%;
-}
-
-.lightbox .close,
-.lightbox .prev,
-.lightbox .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.5);
-    color: black;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 1001;
-}
-
-.lightbox .close {
-    top: 10px;
-    right: 10px;
-    transform: none;
-}
-
-.lightbox .prev {
-    left: 10px;
-}
-
-.lightbox .next {
-    right: 10px;
 }
