@@ -1,3 +1,4 @@
+/* Base Styles (Desktop) */
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +8,7 @@ body {
     font-family: 'OpenSansRegular', Arial, Helvetica, sans-serif;
 }
 
-/* start of header */
+/* Header */
 #header {
     width: 100%;
     background: #fff;
@@ -45,72 +46,12 @@ body {
     gap: 1.5rem;
 }
 
-/* Tablet View */
-@media screen and (max-width: 1024px) {
-    .header-container {
-        padding: 0.75rem;
-    }
-
-    .title {
-        font-size: 1.25rem;
-    }
-
-    .contact-info {
-        gap: 1rem;
-        font-size: 0.9rem;
-    }
-}
-
-/* Mobile View */
-@media screen and (max-width: 768px) {
-    .header-container {
-        flex-direction: column;
-        gap: 1rem;
-        align-items: center;
-        /* Center align items */
-    }
-
-    .logo-and-title {
-        width: 100%;
-        justify-content: center;
-        flex-direction: column;
-        /* Stack logo and title vertically */
-        align-items: center;
-        gap: unset;
-    }
-
-    .logo {
-        width: 150px;
-        height: auto;
-        /* Adjust height to cover both title and contact-info */
-    }
-
-    .title {
-        font-size: 1.3rem;
-    }
-
-    .contact-info {
-        flex-direction: row;
-        align-items: center;
-        gap: 0.5rem;
-        font-size: 0.9rem;
-        padding-bottom: 0.5rem;
-        justify-content: center;
-        /* Center align contact-info */
-    }
-
-    .contact-item {
-        padding: 0.25rem;
-    }
-}
-
 .contact-item {
     color: #686868;
     text-decoration: none;
 }
 
-
-/* General Styles */
+/* Navbar */
 .navbar {
     border-top: 2px solid #e3e2e1;
     background-color: #f1f1f1;
@@ -157,7 +98,6 @@ body {
     text-decoration: none;
     color: #333;
     text-transform: capitalize;
-    /* Capitalize navigation links */
 }
 
 .navbar-list li:hover>a {
@@ -196,134 +136,62 @@ body {
 .navbar-list li.active {
     background-color: #5f8125;
     border-top: 2px solid #24320e;
-
 }
 
 .navbar-list li.active>a {
     color: #fff;
-    /* Ensure text remains visible */
 }
 
-/* Mobile styles */
-@media screen and (max-width: 768px) {
-    .menu-button {
-        display: block;
-    }
-
-    .navbar-list {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        padding-left: 0 !important;
-        background: #f1f1f1;
-    }
-
-    .navbar-list li {
-        width: 100%;
-        border-bottom: 1px solid #ddd;
-    }
-
-    .navbar-list li:last-child {
-        border-bottom: none;
-    }
-
-    .navbar-list li a {
-        padding: 15px 20px;
-    }
-
-    /* Dropdown styling for mobile */
-    .navbar-list ul {
-        position: static;
-        display: none;
-        width: 100%;
-        box-shadow: none;
-        background: #e5e5e5;
-    }
-
-    .navbar-list li:hover>ul {
-        display: none;
-        /* Prevent hover showing dropdown on mobile */
-    }
-
-    /* Show dropdowns when parent is active */
-    .navbar-list li.active>ul {
-        display: block;
-    }
-
-    /* Show menu when navbar is active */
-    .navbar.active .navbar-list {
-        display: flex;
-    }
-
-    /* Change hamburger to X when menu is open */
-    .navbar.active .menu-button::after {
-        content: '×';
-    }
-
-    /* Responsive project-icons */
-    .project-icons {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .project-icon {
-        width: 100%;
-        border-right: none;
-        border-bottom: 1px solid #1a2409;
-    }
-
-    .project-icon:last-child {
-        border-bottom: none;
-    }
-
-    .service-container {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .service-container .service {
-        width: 100%;
-    }
-
-    .footer-section {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-
-    .footer-item {
-        width: 100%;
-        max-width: none;
-        text-align: center;
-    }
-
-    .footer-bottom {
-        flex-direction: column;
-        gap: 10px;
-    }
+/* Project Icons */
+.project-icons {
+    display: flex;
+    justify-content: center;
+    background-color: #6B8E23;
+    width: 100%;
 }
 
-/* Tablet View */
-@media screen and (max-width: 1024px) {
-    .project-icons .container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .project-icon {
-        width: 100%;
-        border-right: none;
-        border-bottom: 1px solid #1a2409;
-    }
-
-    .project-icon:last-child {
-        border-bottom: none;
-    }
+.project-icons .container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: 0;
 }
 
-/* end of header */
+.project-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.125rem;
+    border-right: 1px solid #84B533;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    flex: 1;
+}
 
-/* start of banner */
+.project-icon:first-child {
+    border-left: 1px solid #84B533;
+}
+
+.project-icon:hover {
+    background-color: #2d3e12;
+    text-decoration: underline;
+    color: white;
+}
+
+.project-icon .fa-solid {
+    font-size: 64px !important;
+    margin-bottom: 12px;
+    /* color: #4CAF50; */
+}
+
+/* Banner */
 #banner {
     padding: 0rem;
 }
@@ -332,7 +200,6 @@ body {
     position: relative;
     width: 100%;
     height: 550px;
-    /* Set height to 400px */
     overflow: hidden;
 }
 
@@ -358,22 +225,6 @@ body {
     object-position: center;
 }
 
-/* Tablet View */
-@media screen and (max-width: 1024px) {
-    .slider-container {
-        height: 300px;
-        /* Adjust height for tablet */
-    }
-}
-
-/* Mobile View */
-@media screen and (max-width: 768px) {
-    .slider-container {
-        height: 200px;
-        /* Adjust height for mobile */
-    }
-}
-
 .dots {
     position: absolute;
     bottom: 20px;
@@ -395,59 +246,11 @@ body {
     background: white;
 }
 
-/* end of banner */
-
-/* start of project icon */
-
-.project-icons {
-    display: flex;
-    justify-content: center;
-    /* Center the icons */
-    background-color: #6B8E23;
-    width: 100%;
-    /* Full width green bar */
-}
-
-.project-icons .container {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1200px;
-    /* Limit the width of the icons */
-    padding: 0 20px;
-    /* Add padding for spacing */
-    margin: 0;
-}
-
-.project-icon {
-    flex: 1;
-    padding: 1.5rem;
-    text-align: center;
-    color: white;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 1.125rem;
-    border-right: 1px solid #84B533;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-.project-icon:first-child {
-    border-left: 1px solid #84B533;
-}
-
-.project-icon:hover {
-    background-color: #2d3e12;
-    text-decoration: underline;
-    color: white;
-}
-
-/* end of project icon */
-
-/* start of main */
-
+/* Main Section */
 .container {
     width: 90%;
     margin: 20px auto;
+    max-width: 1200px;
 }
 
 .main-section {
@@ -461,7 +264,6 @@ body {
 .notifications,
 .services {
     flex: 1 1 calc(50% - 20px);
-    /* Two columns with gap */
     border: 1px solid #ddd;
     padding: 15px;
     border-radius: 5px;
@@ -499,15 +301,12 @@ body {
     font-size: 14px;
     margin-right: 10px;
     flex-shrink: 0;
-    /* Ensure the date does not shrink */
     display: flex;
     flex-direction: column;
-    /* Display date in two lines */
 }
 
 .events .event .details {
     flex-grow: 1;
-    /* Allow details to take up remaining space */
 }
 
 .events .event .details h4 {
@@ -584,118 +383,33 @@ body {
 .about-section .content {
     width: 60%;
     background-color: #f1f1f1;
-    /* Light background */
     padding: 20px;
-    /* Add padding */
     border-radius: 10px;
-    /* Rounded corners */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow */
     border: 1px solid #ddd;
-    /* Add border similar to notifications */
 }
 
 .about-section .content h2 {
     color: #333;
-    /* Darker heading color */
     margin-bottom: 10px;
 }
 
 .about-section .content p {
     margin: 10px 0;
     line-height: 1.6;
-    /* Increase line height for readability */
 }
 
 .about-section .content a {
     color: #006400;
     text-decoration: none;
     font-weight: bold;
-    /* Bold links */
 }
 
 .about-section .content a:hover {
     text-decoration: underline;
-    /* Underline on hover */
 }
 
-/* Mobile styles */
-@media screen and (max-width: 768px) {
-    .main-section {
-        flex-direction: column;
-    }
-
-    .notifications {
-        order: -1;
-        /* Move notifications above events */
-    }
-
-    .events,
-    .notifications,
-    .services {
-        flex: 1 1 100%;
-        /* Full width on mobile */
-    }
-
-    .events .event,
-    .notifications .notification {
-        flex-direction: row;
-        /* Ensure row direction on mobile */
-        align-items: center;
-    }
-
-    .events .event .date {
-        margin-right: 10px;
-        margin-bottom: 0;
-        width: auto;
-        text-align: center;
-    }
-
-    .about-section {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .about-section iframe {
-        width: 100%;
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-
-    .about-section .content {
-        width: 100%;
-        box-sizing: border-box;
-        /* Ensure padding is included in width */
-    }
-
-    .service-container {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .service-container .service {
-        width: 90%;
-    }
-
-    .footer-section {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-
-    .footer-item {
-        width: 100%;
-        max-width: none;
-        text-align: center;
-    }
-
-    .footer-bottom {
-        flex-direction: column;
-        gap: 10px;
-    }
-}
-
-/* About Us Styles */
+/* About Us */
 #about-us {
     padding: 40px 0;
     background-color: #f9f9f9;
@@ -721,34 +435,7 @@ body {
     margin-bottom: 20px;
 }
 
-/* Tablet View */
-@media screen and (max-width: 1024px) {
-    #about-us h2 {
-        font-size: 1.75rem;
-    }
-
-    #about-us p {
-        font-size: 0.95rem;
-    }
-}
-
-/* Mobile View */
-@media screen and (max-width: 768px) {
-    #about-us {
-        padding: 20px 0;
-    }
-
-    #about-us h2 {
-        font-size: 1.5rem;
-    }
-
-    #about-us p {
-        font-size: 0.9rem;
-    }
-}
-
-/* start of feedback form */
-
+/* Feedback Form */
 .form-container {
     width: 100%;
     padding: 20px 0 20px 0;
@@ -796,16 +483,13 @@ body {
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #fff;
-    /* White background for fields */
     color: #333;
-    /* Dark text color */
     outline: none;
 }
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
     color: #555;
-    /* Dark grey placeholder text */
 }
 
 .form-group textarea {
@@ -837,9 +521,7 @@ body {
     background-color: #45a049;
 }
 
-/* end of feedback form */
-
-/* Contact Us Styles */
+/* Contact Us */
 #contact-us {
     padding: 40px 0;
     background-color: #f9f9f9;
@@ -958,53 +640,12 @@ body {
     background-color: #45a049;
 }
 
-/* Tablet View */
-@media screen and (max-width: 1024px) {
-    #contact-us h2 {
-        font-size: 1.75rem;
-    }
-
-    #contact-us .contact-info p {
-        font-size: 0.95rem;
-    }
-
-    #contact-us .map-container iframe {
-        width: 100%;
-        height: 400px;
-    }
-}
-
-/* Mobile View */
-@media screen and (max-width: 768px) {
-    #contact-us {
-        padding: 20px 0;
-    }
-
-    #contact-us h2 {
-        font-size: 1.5rem;
-    }
-
-    #contact-us .contact-info p {
-        font-size: 0.9rem;
-    }
-
-    #contact-us .form {
-        width: 90%;
-    }
-
-    #contact-us .map-container iframe {
-        width: 100%;
-        height: 300px;
-    }
-}
-
-/* start of footer */
+/* Footer */
 #footer {
     background-color: #24320e;
 }
 
 .footer {
-    /* background-color: #2a4229; */
     color: #fff;
     text-align: center;
     padding: 20px 0;
@@ -1032,7 +673,6 @@ body {
 .footer-item .icon {
     font-size: 24px;
     color: #6c8547;
-    /* Icon color */
     margin-bottom: 10px;
 }
 
@@ -1055,9 +695,7 @@ body {
     margin: 0 5px;
 }
 
-/* end of footer */
-
-/* Project Page Styles */
+/* Project Page */
 #project-banner {
     position: relative;
     height: 400px;
@@ -1071,7 +709,6 @@ body {
     object-position: center;
 }
 
-/* Add the following styles */
 #project-banner .banner-overlay {
     position: absolute;
     top: 0;
@@ -1079,7 +716,6 @@ body {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
-    /* Semi-transparent overlay */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1095,12 +731,6 @@ body {
 #project-details {
     padding: 40px 0;
     background-color: #f9f9f9;
-}
-
-.container {
-    width: 90%;
-    /* margin: 0 auto; */
-    max-width: 1200px;
 }
 
 #project-details h2 {
@@ -1146,9 +776,73 @@ body {
     margin-bottom: 20px;
 }
 
-
 /* Tablet View */
 @media screen and (max-width: 1024px) {
+    .header-container {
+        padding: 0.75rem;
+    }
+
+    .title {
+        font-size: 1.25rem;
+    }
+
+    .contact-info {
+        gap: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .project-icons .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-icon {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #1a2409;
+    }
+
+    .project-icon:last-child {
+        border-bottom: none;
+    }
+
+    .project-icon {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .project-icon .fa-solid {
+        font-size: 36px !important;
+        margin-bottom: 0;
+        margin-right: 12px;
+    }
+
+    .slider-container {
+        height: 300px;
+    }
+
+    #about-us h2 {
+        font-size: 1.75rem;
+    }
+
+    #about-us p {
+        font-size: 0.95rem;
+    }
+
+    #contact-us h2 {
+        font-size: 1.75rem;
+    }
+
+    #contact-us .contact-info p {
+        font-size: 0.95rem;
+    }
+
+    #contact-us .map-container iframe {
+        width: 100%;
+        height: 400px;
+    }
 
     #project-banner {
         height: 300px;
@@ -1167,6 +861,216 @@ body {
 
 /* Mobile View */
 @media screen and (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .logo-and-title {
+        width: 100%;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: unset;
+    }
+
+    .logo {
+        width: 150px;
+        height: auto;
+    }
+
+    .title {
+        font-size: 1.3rem;
+    }
+
+    .contact-info {
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.9rem;
+        padding-bottom: 0.5rem;
+        justify-content: center;
+    }
+
+    .contact-item {
+        padding: 0.25rem;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .navbar-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding-left: 0 !important;
+        background: #f1f1f1;
+    }
+
+    .navbar-list li {
+        width: 100%;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .navbar-list li:last-child {
+        border-bottom: none;
+    }
+
+    .navbar-list li a {
+        padding: 15px 20px;
+    }
+
+    .navbar-list ul {
+        position: static;
+        display: none;
+        width: 100%;
+        box-shadow: none;
+        background: #e5e5e5;
+    }
+
+    .navbar-list li:hover>ul {
+        display: none;
+    }
+
+    .navbar-list li.active>ul {
+        display: block;
+    }
+
+    .navbar.active .navbar-list {
+        display: flex;
+    }
+
+    .navbar.active .menu-button::after {
+        content: '×';
+    }
+
+    .project-icons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-icon {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #1a2409;
+    }
+
+    .project-icon:last-child {
+        border-bottom: none;
+    }
+
+    .slider-container {
+        height: 200px;
+    }
+
+    .main-section {
+        flex-direction: column;
+    }
+
+    .notifications {
+        order: -1;
+    }
+
+    .events,
+    .notifications,
+    .services {
+        flex: 1 1 100%;
+    }
+
+    .events .event,
+    .notifications .notification {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .events .event .date {
+        margin-right: 10px;
+        margin-bottom: 0;
+        width: auto;
+        text-align: center;
+    }
+
+    .about-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .about-section iframe {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .about-section .content {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .service-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .service-container .service {
+        width: 90%;
+    }
+
+    .footer-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .footer-item {
+        width: 100%;
+        max-width: none;
+        text-align: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .project-icon .fa-solid {
+        font-size: 36px !important;
+    }
+
+    #about-us {
+        padding: 20px 0;
+    }
+
+    #about-us h2 {
+        font-size: 1.5rem;
+    }
+
+    #about-us p {
+        font-size: 0.9rem;
+    }
+
+    #contact-us {
+        padding: 20px 0;
+    }
+
+    #contact-us h2 {
+        font-size: 1.5rem;
+    }
+
+    #contact-us .contact-info p {
+        font-size: 0.9rem;
+    }
+
+    #contact-us .form {
+        width: 90%;
+    }
+
+    #contact-us .map-container iframe {
+        width: 100%;
+        height: 300px;
+    }
+
     #project-banner {
         height: 200px;
     }
