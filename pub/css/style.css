@@ -385,7 +385,7 @@ body {
 }
 
 .notifications .notification-list li:nth-child(even) p {
-    color: red; /* Even items text color */
+    color: #0b5394; /* Even items text color */
 }
 
 .service-container {
