@@ -748,6 +748,13 @@ body {
     margin: 0 5px;
 }
 
+/* Live Visitor Count */
+.live-visitor-count {
+    font-size: 1.2em;
+    color: #fff;
+    margin-top: 10px;
+}
+
 /* Project Page */
 #project-banner {
     position: relative;

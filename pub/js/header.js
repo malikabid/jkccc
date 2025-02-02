@@ -55,6 +55,9 @@ async function initialize() {
             navbar.classList.remove('active');
         }
     });
+
+    // Random visitor count
+    document.getElementById('visitor-count').innerText = Math.floor(Math.random() * 100 + 1);
 }
 
 initialize();
