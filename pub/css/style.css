@@ -908,12 +908,20 @@ body {
         align-items: center;
     }
 
+    .project-icons .container {
+        flex-direction: column;
+        gap: 10px;
+    }
     .project-icon {
-        width: 100%;
+        /* width: 100%; */
         border-right: none;
         border-bottom: 1px solid #1a2409;
+        flex-direction: row;
     }
 
+    .project-icon:first-child {
+        border-left:none;
+    }
     .project-icon:last-child {
         border-bottom: none;
     }
@@ -992,7 +1000,8 @@ body {
     }
 
     .project-icon .fa-solid {
-        font-size: 36px !important;
+        font-size: 48px !important;
+        margin-right: 12px;
     }
 
     #about-us {
