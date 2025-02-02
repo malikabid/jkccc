@@ -380,6 +380,14 @@ body {
     flex-shrink: 0; /* Prevent icon from shrinking */
 }
 
+.notifications .notification-list li:nth-child(odd) p {
+    color: #0b5394; /* Odd items text color */
+}
+
+.notifications .notification-list li:nth-child(even) p {
+    color: red; /* Even items text color */
+}
+
 .service-container {
     display: flex;
     gap: 20px;
@@ -1110,4 +1118,12 @@ body {
     font-size: 16px;
     line-height: 1.6;
     text-align: justify;
+}
+
+.notifications-table .notification-row:nth-child(odd) .notification-text {
+    color: #0b5394; /* Odd items text color */
+}
+
+.notifications-table .notification-row:nth-child(even) .notification-text {
+    color: red; /* Even items text color */
 }
