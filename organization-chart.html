@@ -4,61 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Organization Chart - Jammu & Kashmir Cable Car
-        Corporation</title>
+    <title>Organization Chart - Jammu & Kashmir Cable Car Corporation</title>
     <link rel="stylesheet" href="pub/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-        google.charts.load('current', { packages: ["orgchart"] });
-        google.charts.setOnLoadCallback(drawChart);
-
-        function drawChart() {
-            var data = new google.visualization.DataTable();
-            data.addColumn('string', 'Name');
-            data.addColumn('string', 'Manager');
-            data.addColumn('string', 'ToolTip');
-
-            // For each orgchart box, provide the name, manager, and tooltip to show.
-            data.addRows([
-                [{ 'v': 'Managing Director' },
-                    '', 'MD'],
-                [{ 'v': 'General Manager' },
-                    'Managing Director', 'GM'],
-                ['Accounts Officer', 'General Manager', ''],
-                ['Manager', 'General Manager', ''],
-                ['Establishment Section', 'General Manager', ''],
-                ['Assistant Manager Finance', 'Accounts Officer', ''],
-                ['Supervisor (Personnel)', 'Establishment Section', ''],
-                ['Senior Accountant', 'Assistant Manager Finance', ''],
-                ['Accountant', 'Assistant Manager Finance', ''],
-                ['Cashier', 'Assistant Manager Finance', ''],
-                ['Deputy Manager (Mechanical)', 'Manager', ''],
-                ['Supervisor (e-Governance)', 'Manager', ''],
-                ['Deputy Manager (Electrical)', 'Manager', ''],
-                ['Assistan Manager (Mechanical)', 'Deputy Manager (Mechanical)', ''],
-                ['Supervisor (Mechanical)', 'Assistan Manager (Mechanical)', ''],
-                ['Assistant Manager (Electrical)', 'Deputy Manager (Electrical)', ''],
-                ['Supervisor (Electrical)', 'Assistant Manager (Electrical)', ''],
-                ['Technicians (Mechanical)', 'Supervisor (Mechanical)', ''],
-                ['Helpers (Mechanical)', 'Technicians (Mechanical)', ''],
-                ['Technicians (e-Governance)', 'Supervisor (e-Governance)', ''],
-                ['Helpers (e-Governance)', 'Technicians (e-Governance)', ''],
-                ['Technicians (Electrical)', 'Supervisor (Electrical)', ''],
-                ['Helpers (Electrical)', 'Technicians (Electrical)', '']
-
-            ]);
-
-            // Create the chart.
-            var chart = new google.visualization.OrgChart(document.getElementById('chart_div'));
-            // Draw the chart, setting the allowHtml option to true for the tooltips.
-            chart.draw(data, { 'allowHtml': true });
-        }
-    </script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/arrow-line@1.0.0/dist/arrow-line.min.js"></script> -->
 </head>
 
 <body>
@@ -66,11 +18,112 @@
     <div id="header-placeholder"></div>
 
     <main>
-        <!-- Blank main content to be filled in later -->
         <section id="about-us">
             <div class="container">
                 <h2>Organization Chart</h2>
-                <div style="width: 100%; display: flex; justify-content: center;" id="chart_div"></div>
+                <div class="org-chart">
+                    <div class="org-node">
+                        <div class="org-title" id="managing-director">Managing Director</div>
+                        <div class="org-children">
+                            <div class="org-node">
+                                <div class="org-title" id="general-manager">General Manager</div>
+                                <div class="org-children">
+                                    <div class="org-node">
+                                        <div class="org-title">Accounts Officer</div>
+                                        <div class="org-children">
+                                            <div class="org-node">
+                                                <div class="org-title">Assistant Manager Finance</div>
+                                                <div class="org-children">
+                                                    <div class="org-node">
+                                                        <div class="org-title">Senior Accountant</div>
+                                                    </div>
+                                                    <div class="org-node">
+                                                        <div class="org-title">Accountant</div>
+                                                    </div>
+                                                    <div class="org-node">
+                                                        <div class="org-title">Cashier</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="org-node">
+                                        <div class="org-title">Manager</div>
+                                        <div class="org-children">
+                                            <div class="org-node">
+                                                <div class="org-title">Deputy Manager (Mechanical)</div>
+                                                <div class="org-children">
+                                                    <div class="org-node">
+                                                        <div class="org-title">Assistant Manager (Mechanical)</div>
+                                                        <div class="org-children">
+                                                            <div class="org-node">
+                                                                <div class="org-title">Supervisor (Mechanical)</div>
+                                                                <div class="org-children">
+                                                                    <div class="org-node">
+                                                                        <div class="org-title">Technicians (Mechanical)</div>
+                                                                        <div class="org-children">
+                                                                            <div class="org-node">
+                                                                                <div class="org-title">Helpers (Mechanical)</div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="org-node">
+                                                <div class="org-title">Supervisor (e-Governance)</div>
+                                                <div class="org-children">
+                                                    <div class="org-node">
+                                                        <div class="org-title">Technicians (e-Governance)</div>
+                                                        <div class="org-children">
+                                                            <div class="org-node">
+                                                                <div class="org-title">Helpers (e-Governance)</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="org-node">
+                                                <div class="org-title">Deputy Manager (Electrical)</div>
+                                                <div class="org-children">
+                                                    <div class="org-node">
+                                                        <div class="org-title">Assistant Manager (Electrical)</div>
+                                                        <div class="org-children">
+                                                            <div class="org-node">
+                                                                <div class="org-title">Supervisor (Electrical)</div>
+                                                                <div class="org-children">
+                                                                    <div class="org-node">
+                                                                        <div class="org-title">Technicians (Electrical)</div>
+                                                                        <div class="org-children">
+                                                                            <div class="org-node">
+                                                                                <div class="org-title">Helpers (Electrical)</div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="org-node">
+                                        <div class="org-title">Establishment Section</div>
+                                        <div class="org-children">
+                                            <div class="org-node">
+                                                <div class="org-title">Supervisor (Personnel)</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
