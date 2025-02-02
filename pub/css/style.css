@@ -332,10 +332,52 @@ body {
     margin: 10px 0;
 }
 
-.notifications a {
+.notifications a.view-all {
     color: #006400;
     text-decoration: none;
     font-weight: bold;
+    padding: 5px;
+    float: right;
+}
+
+.notifications .notification-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    animation: scroll-up 30s linear infinite;
+    animation-delay: 1s;
+}
+
+.notifications-container {
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+@keyframes scroll-up {
+    0% {
+        top: 0%;
+    }
+    100% {
+        top: -120%;
+    }
+}
+
+.notifications .notification-list li {
+    display: flex;
+    align-items:baseline; /* Align icon and text */
+    margin-bottom: 15px; /* Improved text gap */
+    font-size: 18px; /* User-friendly font size */
+    line-height: 1.6;
+    text-align: justify;
+    padding: 10px;
+}
+
+.notifications .notification-list li i {
+    margin-right: 10px;
+    color: #6B8E23; /* Icon color */
+    flex-shrink: 0; /* Prevent icon from shrinking */
 }
 
 .service-container {
