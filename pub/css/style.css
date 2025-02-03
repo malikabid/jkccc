@@ -76,6 +76,8 @@ body {
     border-top: 2px solid #e3e2e1;
     background-color: #f1f1f1;
     position: relative;
+    display: flex;
+    justify-content: center;
 }
 
 .menu-button {
@@ -102,13 +104,16 @@ body {
 .navbar-list {
     display: flex;
     list-style: none;
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
     max-width: 1200px;
+    width: 100%;
+    justify-content: space-around;
 }
 
 .navbar-list li {
-    position: relative;
+    flex: 1;
+    text-align: center;
     line-height: 2rem;
 }
 
@@ -119,6 +124,7 @@ body {
     color: #333;
     text-transform: uppercase;
     font-weight: bold;
+    white-space: nowrap;
 }
 
 .navbar-list li:hover>a {
@@ -843,8 +849,19 @@ body {
     margin-bottom: 20px;
 }
 
+@media screen and (max-width: 1159px) {
+    .navbar-list li a {
+        padding: 0.75rem;
+    }
+}
+
+@media screen and (max-width: 1095px) {
+    .navbar-list li a {
+        padding: 0.5rem;
+    }
+}
 /* Tablet View */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1032px) {
     .header-container {
         padding: 0.75rem;
     }
@@ -856,6 +873,10 @@ body {
     .contact-info {
         gap: 0.5rem;
         font-size: 0.9rem;
+    }
+    .navbar-list li a {
+        padding: 0.5rem;
+        font-size: 0.75rem;
     }
 }
 
@@ -1171,5 +1192,61 @@ body {
     }
     100% {
         transform: translateX(-100%);
+    }
+}
+
+/* Tablet View */
+@media screen and (max-width: 1024px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .navbar-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding-left: 0 !important;
+        background: #f1f1f1;
+    }
+
+    .navbar-list li {
+        width: 100%;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .navbar-list li:last-child {
+        border-bottom: none;
+    }
+
+    .navbar-list li a {
+        padding: 15px 20px;
+    }
+
+    .navbar-list ul {
+        position: static;
+        display: none;
+        width: 100%;
+        box-shadow: none;
+        background: #e5e5e5;
+    }
+
+    .navbar-list li:hover>ul {
+        display: none;
+    }
+
+    .navbar-list li.active>ul {
+        display: block;
+    }
+
+    .navbar.active .navbar-list {
+        display: flex;
+    }
+
+    .navbar.active .menu-button::after {
+        content: '×';
     }
 }
