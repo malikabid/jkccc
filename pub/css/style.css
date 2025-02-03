@@ -14,6 +14,7 @@ h3.sub-title-text {
     font-style: italic;
     font-weight: lighter;
 }
+
 body {
     font-family: 'OpenSansRegular', Arial, Helvetica, sans-serif;
 }
@@ -864,6 +865,10 @@ body {
         font-size: 1.3rem;
         white-space: break-spaces;
 
+    }
+    h3.sub-title-text {
+        font-size: 1rem;
+        margin-top: 4px;
     }
     .header-container {
         flex-direction: row;
