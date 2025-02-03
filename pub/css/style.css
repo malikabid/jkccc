@@ -1276,3 +1276,7 @@ body {
     border-bottom: 2px solid #6B8E23;
     padding-bottom: 5px;
 }
+
+.video-section {
+    height: 320px;
+}
