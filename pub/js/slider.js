@@ -7,7 +7,7 @@ const dots = document.querySelectorAll('.dot');
 const totalSlides = 3;
 
 function updateSlider() {
-    slides.style.transform = `translateX(-${currentSlide * 33.333}%)`;
+    slides.style.transform = `translateX(-${currentSlide * 25}%)`;
     dots.forEach((dot, index) => {
         dot.classList.toggle('active', index === currentSlide);
     });
