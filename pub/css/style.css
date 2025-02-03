@@ -451,7 +451,7 @@ body {
 }
 
 .about-section .content {
-    width: 60%;
+    /* width: 60%; */
     background-color: #f1f1f1;
     padding: 20px;
     border-radius: 10px;
