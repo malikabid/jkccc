@@ -138,7 +138,7 @@ body {
     display: none;
     position: absolute;
     top: 100%;
-    left: 0;
+    left: auto;
     background: #f1f1f1;
     min-width: 200px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
