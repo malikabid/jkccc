@@ -1311,7 +1311,7 @@ body {
 
 .table-row-flex {
     display: flex;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
     /* gap: 20px; */
     width: -webkit-fill-available;
     justify-content: space-between;
@@ -1327,5 +1327,8 @@ body {
     
     .table-cell.header {
         text-align: left;
+    }
+    .table-cell-flex.bt{
+        border-top: 1px solid #ddd;
     }
 }
