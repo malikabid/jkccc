@@ -356,6 +356,7 @@ body {
 }
 
 .notifications a.view-all,
+.events .view-all,
 .about-section a.read-more {
     color: #006400;
     text-decoration: none;
@@ -373,7 +374,7 @@ body {
     animation-delay: 1s;
 }
 
-.notifications-container {
+.notifications-container, .events-container {
     height: 300px;
     overflow: hidden;
     position: relative;
@@ -474,12 +475,12 @@ body {
     margin-bottom: 10px;
 }
 
-.about-section .content .organization-container {
+/* .about-section .content .organization-container {
     padding: 15px;
     height: 284px;
     max-height: 300px;
     overflow: auto;
-}
+} */
 .about-section .content p {
     margin: 10px 0;
     line-height: 1.6;
