@@ -1316,6 +1316,9 @@ body {
     width: -webkit-fill-available;
     justify-content: space-between;
 }
+.table-cell-flex {
+    flex:content;
+}
 @media screen and (max-width: 768px) {
     .table-cell, .span2, .span3 {
         display: grid;
