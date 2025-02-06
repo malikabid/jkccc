@@ -200,7 +200,6 @@ body {
     border-right: 1px solid #84B533;
     text-decoration: none;
     transition: background-color 0.3s ease;
-    flex: 1;
 }
 
 .project-icon:first-child {
@@ -1309,7 +1308,13 @@ body {
     width: fit-content; /* Ensure cells fill the container */
 }
 
-
+.table-row-flex {
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* gap: 20px; */
+    width: -webkit-fill-available;
+    justify-content: space-between;
+}
 @media screen and (max-width: 768px) {
     .table-cell, .span2, .span3 {
         display: grid;
