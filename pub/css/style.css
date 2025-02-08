@@ -1332,3 +1332,37 @@ body {
         border-top: 1px solid #ddd;
     }
 }
+
+/* Notification Table */
+.notification-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.notification-table th, .notification-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.notification-table th {
+    background-color: #7BBF3B; /* Two shades lighter green */
+    color: white;
+    font-weight: bold;
+    text-align: center; /* Center text */
+}
+
+.notification-table td {
+    background-color: #f9f9f9;
+}
+
+.notification-table .note {
+    font-style: italic;
+    color: #d9534f; /* Bootstrap's red color */
+    text-align: center;
+}
+
+.notification-table .note.red {
+    color: red;
+}
