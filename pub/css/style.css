@@ -1366,3 +1366,44 @@ body {
 .notification-table .note.red {
     color: red;
 }
+
+/* Notification Popup */
+.notification-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 600px;
+    background: white;
+    border: 2px solid #6B8E23;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    padding: 20px;
+    display: none;
+}
+
+.notification-popup h3 {
+    margin-top: 0;
+    color: #6B8E23;
+}
+
+.notification-popup p {
+    color: #333;
+    line-height: 1.6;
+}
+
+.notification-popup .close-btn {
+    background: #6B8E23;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
+}
+
+.notification-popup .close-btn:hover {
+    background: #4CAF50;
+}
