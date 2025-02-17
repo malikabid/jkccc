@@ -1407,3 +1407,7 @@ body {
 .notification-popup .close-btn:hover {
     background: #4CAF50;
 }
+
+#eapps-twitter-feed-1 .eapps-twitter-feed-container{
+    max-width: 550px !important;
+}
