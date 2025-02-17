@@ -370,7 +370,7 @@ body {
     padding: 0;
     margin: 0;
     position: absolute;
-    animation: scroll-up 30s linear infinite;
+    animation: scroll-up linear infinite;
     animation-delay: 1s;
 }
 
@@ -380,14 +380,6 @@ body {
     position: relative;
 }
 
-@keyframes scroll-up {
-    0% {
-        top: 0%;
-    }
-    100% {
-        top: -120%;
-    }
-}
 
 .notifications .notification-list li {
     display: flex;
